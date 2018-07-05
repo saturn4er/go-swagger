@@ -154,15 +154,15 @@ func GoLangOpts() *LanguageOpts {
 			//    - Case 3: Symlink in target path points to directory outside GOPATH (Unexpanded target path)
 
 			// Case 1: - Do nothing case. If non-expanded paths match just genrate base import path as if
-			//				   there are no symlinks.
+			// 				   there are no symlinks.
 
 			// Case 2: - Symlink in target path points to location inside GOPATH. (Expanded Target Path)
-			//					 First if will fail. Second if will succeed.
+			// 					 First if will fail. Second if will succeed.
 
 			// Case 3: - Symlink in target path points to directory outside GOPATH (Unexpanded target path)
 			// 					 First if will succeed and break.
 
-			//compares non expanded path for both
+			// compares non expanded path for both
 			if ok, relativepath := checkPrefixAndFetchRelativePath(tgtAbsPath, gp); ok {
 				pth = relativepath
 				break
@@ -600,9 +600,9 @@ func (g *GenOpts) render(t *TemplateOpts, data interface{}) ([]byte, error) {
 	if err := templ.Execute(&tBuf, data); err != nil {
 		return nil, fmt.Errorf("template execution failed for template %s: %v", t.Name, err)
 	}
-	//if Debug {
+	// if Debug {
 	log.Printf("executed template %s", t.Source)
-	//}
+	// }
 
 	return tBuf.Bytes(), nil
 }
@@ -885,11 +885,11 @@ func gatherOperations(specDoc *analysis.Spec, operationIDs []string) map[string]
 			operations[nm] = opr
 		}
 	}
-
 	return operations
 }
 
 func pascalize(arg string) string {
+	arg = strings.NewReplacer(">=", "Ge", "<=", "Le", ">", "Gt", "<", "Lt", "=", "Eq").Replace(arg)
 	if len(arg) == 0 || arg[0] > '9' {
 		return swag.ToGoName(arg)
 	}
