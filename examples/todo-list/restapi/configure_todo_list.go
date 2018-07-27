@@ -10,8 +10,8 @@ import (
 	runtime "github.com/go-openapi/runtime"
 	middleware "github.com/go-openapi/runtime/middleware"
 
-	"github.com/go-swagger/go-swagger/examples/todo-list/restapi/operations"
-	"github.com/go-swagger/go-swagger/examples/todo-list/restapi/operations/todos"
+	"github.com/saturn4er/go-swagger/examples/todo-list/restapi/operations"
+	"github.com/saturn4er/go-swagger/examples/todo-list/restapi/operations/todos"
 )
 
 //go:generate swagger generate server --target .. --name TodoList --spec ../swagger.yml

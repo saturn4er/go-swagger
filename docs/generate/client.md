@@ -38,7 +38,7 @@ Help Options:
           --additional-initialism=  additional consecutive capitals that should be considered as initialism, repeat for multiple
 ```
 
-There is an example client in https://github.com/go-swagger/go-swagger/tree/master/examples/todo-list/client
+There is an example client in https://github.com/saturn4er/go-swagger/tree/master/examples/todo-list/client
 
 To generate a client:
 

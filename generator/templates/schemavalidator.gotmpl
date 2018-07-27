@@ -145,7 +145,7 @@
             {{- end }}
             {{ if and .IsTuple .AdditionalItems }}
       // TODO: validating additional items should go here, if you see this raise an issue
-      // at https://github.com/go-swagger/go-swagger/issues
+      // at https://github.com/saturn4er/go-swagger/issues
             {{ end }}
           {{ else }}
             {{ template "primitivefieldvalidator" . }}
@@ -193,7 +193,7 @@
           {{- end }}
           {{ if and .IsTuple .AdditionalItems }}
       // TODO: validating additional items should go here, if you see this raise an issue
-      // at https://github.com/go-swagger/go-swagger/issues
+      // at https://github.com/saturn4er/go-swagger/issues
           {{ end }}
         {{ end }}
     }
@@ -214,7 +214,7 @@
     {{- if and .IsMap .HasValidations }}{{/* validation of aliased maps but does not know about AdditionalProperties: e.g. it comes from a $ref */}}
       {{- if not .IsAnonymous }}
         {{- if $.IsMap }}{{/* we come from a map range */}}
-      if val, ok := {{ .ValueExpression }}; ok {  
+      if val, ok := {{ .ValueExpression }}; ok {
         {{- end }}
         {{- if and .IsNullable (not .IsMapNullOverride) }}
           {{- if $.IsMap }}
@@ -229,7 +229,7 @@
         {{- if and .IsNullable (not .IsMapNullOverride) }}
         }
         {{- end }}
-        {{- if or $.IsMap }} 
+        {{- if or $.IsMap }}
      }
         {{- end }}
       {{- end }}
@@ -270,7 +270,7 @@
   {{- end }}
   {{- if and .IsTuple .AdditionalItems }}
     // TODO: validating additional items should go here, if you see this raise an issue
-    // at https://github.com/go-swagger/go-swagger/issues
+    // at https://github.com/saturn4er/go-swagger/issues
   {{- end }}
 {{ end }}
 

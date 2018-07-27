@@ -12,10 +12,10 @@ import (
 	runtime "github.com/go-openapi/runtime"
 	middleware "github.com/go-openapi/runtime/middleware"
 
-	"github.com/go-swagger/go-swagger/examples/composed-auth/restapi/operations"
+	"github.com/saturn4er/go-swagger/examples/composed-auth/restapi/operations"
 
-	auth "github.com/go-swagger/go-swagger/examples/composed-auth/auth"
-	models "github.com/go-swagger/go-swagger/examples/composed-auth/models"
+	auth "github.com/saturn4er/go-swagger/examples/composed-auth/auth"
+	models "github.com/saturn4er/go-swagger/examples/composed-auth/models"
 )
 
 //go:generate swagger generate server --target .. --name multi-auth-example --spec ../swagger.yml --principal models.Principal
